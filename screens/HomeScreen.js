@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
 import { scale } from 'react-native-size-matters';
-import Carousel from './components/Carousel';
+import Carousel from '../components/Carousel';
 import LinearGradient from 'react-native-linear-gradient';
-import PremiumCard from './components/PremiumCard';
-import TextInputComp from './components/TextInputComp';
-import Footer from './components/Footer';
+import PremiumCard from '../components/PremiumCard';
+import TextInputComp from '../components/TextInputComp';
+import Footer from '../components/Footer';
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={{ flex: 1 }}>
@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={{ fontSize: scale(30), fontWeight: 'bold', color: '#000' }}>Good Evening</Text>
                             <Text style={{ fontSize: scale(16), fontWeight: '500', color: '#9B9B9B' }}>Welcome back</Text>
                         </View>
-                        <Image style={{ height: scale(38), width: scale(38) }} source={require('./assets/king.png')} />
+                        <Image style={{ height: scale(38), width: scale(38) }} source={require('../assets/king.png')} />
                     </View>
                     <View style={{ marginTop: scale(22) }}>
                         <PremiumCard />
@@ -27,15 +27,15 @@ const HomeScreen = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: scale(22) }}>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
-                            <Image source={require('./assets/single.png')} />
+                            <Image source={require('../assets/single.png')} />
                             <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Single Scan</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
-                            <Image source={require('./assets/batch.png')} />
+                            <Image source={require('../assets/batch.png')} />
                             <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Batch Scan</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
-                            <Image source={require('./assets/scan.png')} />
+                            <Image source={require('../assets/scan.png')} />
                             <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Scan to Text</Text>
                         </TouchableOpacity>
                     </View>
@@ -43,7 +43,7 @@ const HomeScreen = ({ navigation }) => {
                     <Carousel />
                     <View style={{ width: '88%', alignSelf: 'center', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', marginTop: scale(22), marginBottom: scale(22) }}>
                         <Text style={{ color: '#000', fontSize: scale(18), fontWeight: 'bold' }}>Floders</Text>
-                        <Image style={{}} source={require('./assets/file.png')} />
+                        <Image style={{}} source={require('../assets/file.png')} />
 
                     </View>
                 </ScrollView>

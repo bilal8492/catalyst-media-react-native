@@ -2,8 +2,8 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Text } from 'react-native';
-import SplashScreen from './SplashScreen';
-import HomeScreen from './HomeScreen'
+import SplashScreen from './screens/SplashScreen';
+import HomeScreen from './screens/HomeScreen'
 const Stack = createStackNavigator();
 
 if (Text.defaultProps == null) Text.defaultProps = {};
