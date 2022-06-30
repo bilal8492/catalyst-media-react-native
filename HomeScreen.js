@@ -5,6 +5,7 @@ import Carousel from './components/Carousel';
 import LinearGradient from 'react-native-linear-gradient';
 import PremiumCard from './components/PremiumCard';
 import TextInputComp from './components/TextInputComp';
+import Footer from './components/Footer';
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={{ flex: 1 }}>
@@ -40,10 +41,13 @@ const HomeScreen = ({ navigation }) => {
                     </View>
 
                     <Carousel />
-                    <TouchableOpacity onPress={() => navigation.navigate('SplashScreen')}>
-                        <Text style={{ color: '#000' }}>HomeScreen</Text>
-                    </TouchableOpacity>
+                    <View style={{ width: '88%', alignSelf: 'center', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', marginTop: scale(22), marginBottom: scale(22) }}>
+                        <Text style={{ color: '#000', fontSize: scale(18), fontWeight: 'bold' }}>Floders</Text>
+                        <Image style={{}} source={require('./assets/file.png')} />
+
+                    </View>
                 </ScrollView>
+                <Footer />
             </LinearGradient>
         </View>
     )
