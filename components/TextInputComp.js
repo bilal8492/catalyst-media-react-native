@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const TextInputComp = () => {
     return (
-        <View style={{ height: scale(40), width: '90%', alignSelf: 'center', borderRadius: 30, backgroundColor: '#fff', flexDirection: 'row', alignItems: 'center', paddingLeft: 15 }}>
+        <View style={styles.main}>
             <Icon name='search1' size={25} color='#9B9B9B' />
             <TextInput
                 style={styles.input}
@@ -28,4 +28,14 @@ const styles = StyleSheet.create({
         fontSize: scale(13),
         marginLeft: scale(10)
     },
+    main: {
+        height: scale(40),
+        width: '90%',
+        alignSelf: 'center',
+        borderRadius: 30,
+        backgroundColor: '#fff',
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingLeft: 15
+    }
 })

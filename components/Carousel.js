@@ -27,17 +27,17 @@ const Carousel = () => {
     ]
     return (
         <View>
-            <View style={{ marginLeft: scale(22), marginTop: scale(20), marginBottom: scale(14) }}><Text style={{ fontSize: scale(18), fontWeight: 'bold', color: '#000' }}>Recent Scans</Text></View>
+            <View style={styles.recentParent}><Text style={styles.recentText}>Recent Scans</Text></View>
             <ViewSlider
                 renderSlides={
-                    <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                    <View style={styles.renderSlides}>
                         {
                             data.map((data) => {
                                 return (
 
                                     <View key={data.id} style={styles.imgParent}>
-                                        <Image style={{ height: scale(190), width: scale(190), borderRadius: 10, resizeMode: 'cover' }} source={data.img} />
-                                        <View style={{ height: 22, minWidth: 50, borderRadius: 5, backgroundColor: '#49A6FC', justifyContent: 'center', alignItems: 'center', position: 'absolute', bottom: 13, left: 12 }}><Text style={{ color: '#fff', fontWeight: '500', fontSize: 12 }}>{data.day}</Text></View>
+                                        <Image style={styles.carImg} source={data.img} />
+                                        <View style={styles.dayParent}><Text style={styles.dayText}>{data.day}</Text></View>
                                     </View>
                                 )
                             })
@@ -63,6 +63,10 @@ const styles = StyleSheet.create({
         // backgroundColor: 'pink',
 
     },
+    renderSlides: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
     imgParent: {
         height: scale(190),
         width: scale(190),
@@ -71,5 +75,37 @@ const styles = StyleSheet.create({
         marginLeft: scale(22),
         marginRight: scale(10),
         position: 'relative'
+    },
+    recentParent: {
+        marginLeft: scale(22),
+        marginTop: scale(20),
+        marginBottom: scale(14)
+    },
+    recentText: {
+        fontSize: scale(18),
+        fontWeight: 'bold',
+        color: '#000'
+    },
+    carImg: {
+        height: scale(190),
+        width: scale(190),
+        borderRadius: 10,
+        resizeMode: 'cover'
+    },
+    dayParent: {
+        height: 22,
+        minWidth: 50,
+        borderRadius: 5,
+        backgroundColor: '#49A6FC',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 13,
+        left: 12
+    },
+    dayText: {
+        color: '#fff',
+        fontWeight: '500',
+        fontSize: 12
     }
 });

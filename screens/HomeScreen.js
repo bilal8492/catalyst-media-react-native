@@ -11,38 +11,38 @@ const HomeScreen = ({ navigation }) => {
         <View style={{ flex: 1 }}>
             <LinearGradient colors={['#E5E5E5', '#f8f8f8', '#fefefe']} style={{ flex: 1 }} >
                 <ScrollView>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', height: scale(60), paddingHorizontal: scale(22), marginTop: scale(40) }}>
+                    <View style={styles.welcParent}>
                         <View>
-                            <Text style={{ fontSize: scale(30), fontWeight: 'bold', color: '#000' }}>Good Evening</Text>
-                            <Text style={{ fontSize: scale(16), fontWeight: '500', color: '#9B9B9B' }}>Welcome back</Text>
+                            <Text style={styles.goodE}>Good Evening</Text>
+                            <Text style={styles.wel}>Welcome back</Text>
                         </View>
                         <Image style={{ height: scale(38), width: scale(38) }} source={require('../assets/king.png')} />
                     </View>
-                    <View style={{ marginTop: scale(22) }}>
+                    <View style={styles.topSpace}>
                         <PremiumCard />
                     </View>
-                    <View style={{ marginTop: scale(22) }}>
+                    <View style={styles.topSpace}>
                         <TextInputComp />
                     </View>
 
-                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: scale(22) }}>
+                    <View style={styles.scanParent}>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
                             <Image source={require('../assets/single.png')} />
-                            <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Single Scan</Text>
+                            <Text style={styles.scanText}>Single Scan</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
                             <Image source={require('../assets/batch.png')} />
-                            <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Batch Scan</Text>
+                            <Text style={styles.scanText}>Batch Scan</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={{ alignItems: 'center' }}>
                             <Image source={require('../assets/scan.png')} />
-                            <Text style={{ fontSize: scale(12), fontWeight: '700', color: '#000', marginTop: scale(10) }}>Scan to Text</Text>
+                            <Text style={styles.scanText}>Scan to Text</Text>
                         </TouchableOpacity>
                     </View>
 
                     <Carousel />
-                    <View style={{ width: '88%', alignSelf: 'center', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between', marginTop: scale(22), marginBottom: scale(22) }}>
-                        <Text style={{ color: '#000', fontSize: scale(18), fontWeight: 'bold' }}>Floders</Text>
+                    <View style={styles.floderParent}>
+                        <Text style={styles.folderText}>Floders</Text>
                         <Image style={{}} source={require('../assets/file.png')} />
 
                     </View>
@@ -56,22 +56,52 @@ const HomeScreen = ({ navigation }) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
-
-    slider: {
-        alignSelf: 'center',
-        justifyContent: 'center',
+    wel: {
+        fontSize: scale(16),
+        fontWeight: '500',
+        color: '#9B9B9B'
+    },
+    goodE: {
+        fontSize: scale(30),
+        fontWeight: 'bold',
+        color: '#000'
+    },
+    welcParent: {
+        flexDirection: 'row',
         alignItems: 'center',
-        // backgroundColor: 'pink',
-
+        justifyContent: 'space-between',
+        height: scale(60),
+        paddingHorizontal: scale(22),
+        marginTop: scale(40)
     },
-    imgParent: {
-        height: scale(190),
-        width: scale(190),
-        backgroundColor: '#ddd',
-        borderRadius: 10,
-        marginLeft: scale(22),
-        marginRight: scale(10),
-        position: 'relative'
+    topSpace: {
+        marginTop: scale(22),
     },
+    floderParent: {
+        width: '88%',
+        alignSelf: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: scale(22),
+        marginBottom: scale(22)
+    },
+    folderText: {
+        color: '#000',
+        fontSize: scale(18),
+        fontWeight: 'bold'
+    },
+    scanParent: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        marginTop: scale(22)
+    },
+    scanText: {
+        fontSize: scale(12),
+        fontWeight: '700',
+        color: '#000',
+        marginTop: scale(10)
+    }
 
 });
